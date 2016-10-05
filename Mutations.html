@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mutations #248</title>
+</head>
+<body>
+<p id = alert>here</p>
+<script>
+	
+function mutation(arr) {
+  
+  var str1 = (arr[0]);
+  var str2 = (arr[1]);
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+  var compare;
+  var answer = true;
+
+  
+  for (var i = 0; i < str2.length; i++) {
+
+   compare = str1.indexOf(str2[i]);
+  
+   if (compare === -1){
+   	answer = false;
+   }//end of if else statements
+   
+  }//end of for loop
+  
+  return answer;
+  
+  }//end of function
+ 
+
+
+mutation(["hello", "hey"]);
+
+/*mutation(["hello", "hey"]) should return false. because no y in str 1.
+mutation(["hello", "Hello"]) should return true.
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]) should return true.
+mutation(["Mary", "Army"]) should return true.
+mutation(["Mary", "Aarmy"]) should return true.
+mutation(["Alien", "line"]) should return true.
+mutation(["floor", "for"]) should return true.
+mutation(["hello", "neo"]) should return false.
+mutation(["v
+*/
+
+
+
+
+
+</script>
+
+</body>
+</html>

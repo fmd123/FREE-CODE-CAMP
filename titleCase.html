@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title Case a Sentence #241</title>
+</head>
+<body>
+<script>
+	
+function titleCase(str) {
+  str = str.toLowerCase().split(" ");
+  //I might be able to combine these...
+ 
+  for(i=0;i<str.length;i++){
+   str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+   //I did str = str[i].charAt(0) etc. etc. at first. Need to remember that we are adding together the two parts and putting them into a single element at [i].
+   //.slice(beginning i, the i after the last i desired) but don't need the second i if you want to go all the way to end of string. 
+
+  }//end of for loop
+
+  
+  return str.join(" ");
+}
+
+titleCase("I'm a little tea pot");
+
+//lower and split the string into an array of words. 
+
+/*titleCase("I'm a little tea pot") should return a string.
+titleCase("I'm a little tea pot") should return "I'm A Little Tea Pot".
+titleCase("sHoRt AnD sToUt") should return "Short And Stout".
+titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") should return "Here Is My Handle Here Is My Spout".*/
+</script>
+
+</body>
+</html>

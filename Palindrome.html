@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Palindrome #239</title>
+</head>
+<body>
+<script>
+function palindrome(str) {
+  str = str.toLowerCase().replace(/[\W\s\_]/gi, "");
+  // \W handles non-alphanumeric characters, including comma?; \s handles white spaces; \_ handles the underscore. 
+  console.log (str);
+  var strArray = str.split("");
+  strArray.reverse();
+  console.log (strArray);
+  var backWards = strArray.join("");
+  if (backWards === str) {
+   return console.log(true); 
+  }else if (backWards !== str) {
+  return false;
+  } 
+}
+
+
+
+palindrome("A man, a plan, a canal. Panama");	
+
+
+
+
+</script>
+
+</body>
+</html>
