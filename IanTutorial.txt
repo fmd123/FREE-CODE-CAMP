@@ -1,0 +1,66 @@
+
+IanTutorial.txt
+
+https://github.com/fmd123/finalproject
+type it! 
+Each div has a discription of what should be in  it. And I want to add what things it will have thtat are clickable. etc. 
+each div will be full page with sub divs etc. as needed. Does that make sense?
+  
+  
+ian@ianmarshall.net
+
+skeleton 
+
+javascript file or maybe files with a library file. 
+
+
+.css file
+
+
+variables:
+//global to the app
+???
+//saved between sessions
+???
+  
+  
+
+functions:
+//data functions
+getData() // retrieve data from local storage or return null if it doesn't exist
+setData() // put data file onto the local storage
+//view functions
+displayIndex() // will show "number of days" if getData() returns data, or "create habit" if null
+displayFAQ() // asynchronously load external html page or a json file
+displayCreateHabit() //
+displayReward()
+displayFinished()
+displaySorry()
+displayPage(whichPage) //generic page view function
+whichPage is a variable that would be used to view/hide for each div view. 
+
+
+//controller functions
+//these functions may alter the data, which means the new data needs to be stored again
+//they may also call a view function
+newHabitButtonClicked()
+finishButtonClicked()
+resetClicked()
+BeginClicked()
+yesNoClicked()
+//helper functions or app functions
+getDate()
+//logic function
+finishedWithHabit() // returns true or false
+
+
+//delegator function, or "executive" function
+//a delegator function is a master controller; it calls other functions based on logic
+if (finishedWithHabit()){
+  displayFinished()
+} else {
+  displayNotFinished(){
+  
+}
+  
+  

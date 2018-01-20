@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>falsy Bouncer #249</title>
+</head>
+<body>
+<script>
+	function bouncer(arr) {
+
+  function testFalsy (value) { // is value a reserved word?
+   
+    if (isNan(value) === false || typeOf(value) === 'number'|| typeOf(value) === undefined || value ===0 || value ==="" || value === null ){      
+      return value;   //if the value passes test return it.
+    }  
+  }//end of testFalsy function
+
+ //wrap a function inside of a function to get this to work. 
+  return arr.filter(testFalsy);//.filter method filters out anything that returns false.
+}//end of bouncer function
+
+bouncer([7, "ate", "", false, 9]);
+
+
+</script>
+
+</body>
+</html>
